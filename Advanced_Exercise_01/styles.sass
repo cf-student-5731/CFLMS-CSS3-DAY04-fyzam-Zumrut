@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap")
+/* font-family: 'Roboto', sans-serif; */
+
+@media screen and (max-width: 640px)
+	body
+		background-color: yellow
+		#img_container img
+			width: 480px
+		div[id="img_container"]
+			width: 480px * 0.8
+			margin-left: 480px * 0.1
+
+@media screen and (min-width: 641px) and (max-width: 1080px)
+	body
+		background-color: blue
+		#img_container img
+			width: 640px
+		div[id="img_container"]
+			width: 640px * 0.8
+			margin-left: 640px * 0.1
+
+@media screen and (min-width: 1081px)
+	body
+		background-color: red
+		#img_container img
+			width: 1080px
+		div[id="img_container"]
+			width: 1080px * 0.8
+			margin-left: 1080px * 0.1
+
+*
+	margin: 0
+
+h1
+	text-align: center
+
+div[id="img_container"]
+	display: flex
+	padding-top: 20px
+	flex-flow: column
+	overflow: hidden
+	
+#img_container figure
+	display: flex
+	flex-flow: column
+	text-align: center
+
+#img_container figure p
+	margin-bottom: 20px
