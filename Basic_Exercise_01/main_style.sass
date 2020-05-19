@@ -7,6 +7,7 @@ $horizontal-space: 20px
 $figure-width: 200px
 $figure-height: 150px
 $person_container_width: 250px
+$space_in_container: 300px
 
 @mixin horizontal-right
 	display: flex
@@ -22,12 +23,11 @@ body
 	background-color: #6C4AFF
 
 h1	
-	width: 2 * $figure-width + 100px + $person_container_width
+	width: 2 * $figure-width + $space_in_container + $person_container_width
 	padding-top: $header-height + 30px
 	text-align: center
 
 header nav
-	@include horizontal-right
 	z-index: 1
 	position: fixed
 	height: $header-height
@@ -35,7 +35,7 @@ header nav
 	background-color: lightgrey
 	padding: 7px
 
-nav a, figcaption
+nav a, nav li, figcaption
 	text-decoration: none
 	font-weight: 700
 	color: #FFFFFF
@@ -50,7 +50,7 @@ div[id="img_container"]
 	display: flex
 	padding-top: $vertival-space
 	flex-flow: wrap
-	width: 2 * $figure-width + 300px
+	width: 2 * $figure-width + $space_in_container
 	justify-content: space-around
 	background: #6C4AFF
 	background: linear-gradient(90deg, #6C4AFF 0%, #6C4AFF 35%, #00d4ff 100%)
@@ -61,6 +61,7 @@ div[id="img_container"]
 	text-align: center
 	width: $figure-width
 	overflow: hidden
+	
 #img_container figure p
 	margin-bottom: 20px
 
