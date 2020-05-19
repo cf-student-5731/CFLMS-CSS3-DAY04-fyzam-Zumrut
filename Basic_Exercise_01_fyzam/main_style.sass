@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+/* font-family: 'Roboto', sans-serif; */
+
+$header-height: 60px
+$vertival-space: 30px
+$horizontal-space: 20px
+$figure-width: 200px
+$figure-height: 150px
+$person_container_width: 250px
+
+@mixin horizontal-right
+	display: flex
+	flex-flow: row
+	flex-direction: row-reverse
+	
+*
+	margin: 0
+	font-family: 'Roboto', sans-serif
+	font-style: 400
+
+body
+	background-color: #6C4AFF
+
+h1	
+	width: 2 * $figure-width + 100px + $person_container_width
+	padding-top: $header-height + 30px
+	text-align: center
+
+header nav
+	@include horizontal-right
+	z-index: 1
+	position: fixed
+	height: $header-height
+	width: 100%
+	background-color: lightgrey
+	padding: 7px
+
+nav a, figcaption
+	text-decoration: none
+	font-weight: 700
+	color: #FFFFFF
+
+nav li, ul
+	@include horizontal-right
+
+nav li
+	margin: $horizontal-space
+
+div[id="img_container"]
+	display: flex
+	padding-top: $vertival-space
+	flex-flow: wrap
+	width: 2 * $figure-width + 100px
+	justify-content: space-around
+	background: #6C4AFF
+	background: linear-gradient(90deg, #6C4AFF 0%, #6C4AFF 35%, #00d4ff 100%)
+	
+#img_container figure
+	display: flex
+	flex-flow: column
+	text-align: center
+	width: $figure-width
+	overflow: hidden
+#img_container figure p
+	margin-bottom: 20px
+
+#medium
+	width: 100%
+	height: $figure-height
+
+#body_container
+	display: flex
+	flex-flow: row
+
+#person_container
+	display: flex
+	flex-flow: column
+	width: $person_container_width
+	text-align: justify
+	background: #6C4AFF
+	background: linear-gradient(270deg, #6C4AFF 0%, #6C4AFF 35%, #00d4ff 100%)
+
+#person_container img, figure
+	width: 100%
+	text-align: center
+
+#person_container p
+	margin-top: 20px	
+	
+
+
+
+
+	
+
+	
